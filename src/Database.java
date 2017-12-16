@@ -140,7 +140,7 @@ public class Database {
         String[] nocturnalEyed = {"nn"};
         String[] infraredEyed = {"ii"};
         String[] xrayEyed = {"xx"};
-        String[] shortClawed = {"CC","Cc"};
+     // String[] shortClawed = {"CC","Cc"};
         String[] longClawed = {"cc"};
         String[] serratedClaws = {"ss"};
         String[] prehensileTongue = {"tt"};
@@ -217,11 +217,94 @@ public class Database {
         crownHornsM.put("crownHorns", 1);
         PHENOTYPES.add(new Phenotype("Crown Horns", crownHorn, crownHornsM));
 
+        Map<String, Integer>bodyLong = new HashMap<>();
+        bodyLong.put("bodyLength", 10);
+        PHENOTYPES.add(new Phenotype("Long Body One", longBodyOne, bodyLong));
+        PHENOTYPES.add(new Phenotype("Long Body Two", longBodyTwo, bodyLong));
 
+        Map<String, Integer>bodyMed = new HashMap<>();
+        bodyMed.put("bodyLength", 5);
+        PHENOTYPES.add(new Phenotype("Medium Body One", mediumBodyOne, bodyMed));
+        PHENOTYPES.add(new Phenotype("Medium Body Two", mediumBodyTwo, bodyMed));
 
+        Map<String, Integer>bodyShort = new HashMap<>();
+        bodyShort.put("bodyLength", 0);
+        PHENOTYPES.add(new Phenotype("Short Body One", shortBodyOne, bodyShort));
+        PHENOTYPES.add(new Phenotype("Short Body Two", shortBodyTwo, bodyShort));
 
+        Map<String, Integer>buildMuscular = new HashMap<>();
+        buildMuscular.put("build", 10);
+        PHENOTYPES.add(new Phenotype("Muscular Build One", muscularBodyOne, buildMuscular));
+        PHENOTYPES.add(new Phenotype("Muscular Build Two", muscularBodyTwo, buildMuscular));
 
+        Map<String, Integer>buildAverage = new HashMap<>();
+        buildAverage.put("build", 5);
+        PHENOTYPES.add(new Phenotype("Average Build One", averageBodyOne, buildAverage));
+        PHENOTYPES.add(new Phenotype("Average Build Two", averageBodyTwo, buildAverage));
 
+        Map<String, Integer>buildThin = new HashMap<>();
+        buildThin.put("build", 0);
+        PHENOTYPES.add(new Phenotype("Thin Build One", thinBodyOne, buildThin));
+        PHENOTYPES.add(new Phenotype("Thin Build Two", thinBodyTwo, buildThin));
+
+        Map<String, Integer>sizeLarge = new HashMap<>();
+        sizeLarge.put("size", 10);
+        PHENOTYPES.add(new Phenotype("Large Size One", largeSizeOne, sizeLarge));
+        PHENOTYPES.add(new Phenotype("Large Size Two", largeSizeTwo, sizeLarge));
+
+        Map<String, Integer>sizeMedium = new HashMap<>();
+        sizeMedium.put("size", 5);
+        PHENOTYPES.add(new Phenotype("Medium Size One", mediumSizeOne, sizeMedium));
+        PHENOTYPES.add(new Phenotype("Medium Size Two", mediumSizeTwo, sizeMedium));
+
+        Map<String, Integer>sizeSmall = new HashMap<>();
+        sizeSmall.put("size", 0);
+        PHENOTYPES.add(new Phenotype("Small Size One", smallSizeOne, sizeSmall));
+        PHENOTYPES.add(new Phenotype("Small Size Two", smallSizeTwo, sizeSmall));
+
+        Map<String, Integer>venomousM = new HashMap<>();
+        venomousM.put("venom", 1);
+        PHENOTYPES.add(new Phenotype("Venom", venomous, venomousM));
+
+        Map<String, Integer>nocturnalEyedM = new HashMap<>();
+        nocturnalEyedM.put("nocturnalEyes", 1);
+        PHENOTYPES.add(new Phenotype("Nocturnal Eyes", nocturnalEyed, nocturnalEyedM));
+
+        Map<String, Integer>infraredEyedM = new HashMap<>();
+        infraredEyedM.put("infraredEyes", 1);
+        PHENOTYPES.add(new Phenotype("Infrared Eyes", infraredEyed, infraredEyedM));
+
+        Map<String, Integer>xrayEyedM = new HashMap<>();
+        xrayEyedM.put("xrayEyes", 1);
+        PHENOTYPES.add(new Phenotype("X-ray Eyes", xrayEyed, xrayEyedM));
+
+        Map<String, Integer>claws = new HashMap<>();
+        claws.put("longClaws", 1);
+        PHENOTYPES.add(new Phenotype("Long Claws", longClawed, claws));
+
+        Map<String, Integer>serratedClawsM = new HashMap<>();
+        serratedClawsM.put("serratedClaws", 1);
+        PHENOTYPES.add(new Phenotype("Serrated Claws", serratedClaws, serratedClawsM));
+
+        Map<String, Integer>prehensileTongueM = new HashMap<>();
+        prehensileTongueM.put("prehensileTongue", 1);
+        PHENOTYPES.add(new Phenotype("Prehensile Tongue", prehensileTongue, prehensileTongueM));
+
+        Map<String, Integer>strongNoseM = new HashMap<>();
+        strongNoseM.put("strongNose", 1);
+        PHENOTYPES.add(new Phenotype("Strong Nose", strongNose, strongNoseM));
+
+        Map<String, Integer>monsterScentsM = new HashMap<>();
+        monsterScentsM.put("monsterScent", 1);
+        PHENOTYPES.add(new Phenotype("Monster Scent", monsterScents, monsterScentsM));
+
+        Map<String, Integer>itemScentsM = new HashMap<>();
+        itemScentsM.put("itemScent", 1);
+        PHENOTYPES.add(new Phenotype("Item Scent", itemScents, itemScentsM));
+
+        Map<String, Integer>lineShapeM = new HashMap<>();
+        lineShapeM.put("lineShape", 1);
+        PHENOTYPES.add(new Phenotype("Line Shape", lineShape, lineShapeM));
 
         Map<String, Integer>maleSex = new HashMap<>();
         maleSex.put("sex", 0);
