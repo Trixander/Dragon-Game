@@ -9,7 +9,6 @@ public class Database {
 
     public Database() {
         //Genotypes
-        String[] tailShapes = {"TT","Tt","tt"};
         String[] tailLengthsOne = {"LL","Ll","ll"};
         String[] tailLengthsTwo = {"MM","Mm","mm"};
         String[] spikeTail = {"EE","Ee","ee"};
@@ -53,51 +52,49 @@ public class Database {
         String[] spikeArms = {"AA","Aa","aa"};
         String[] legs = {"LL","Ll","ll"};
         String[] sex = {"XX","XY"};
-        GENOTYPES.add(tailShapes);
         GENOTYPES.add(tailLengthsOne);
         GENOTYPES.add(tailLengthsTwo);
         GENOTYPES.add(spikeTail);
         GENOTYPES.add(cudgelTail);
         GENOTYPES.add(bladeTail);
-        GENOTYPES.add(bodyLengthOne);
-        GENOTYPES.add(bodyLengthTwo);
         GENOTYPES.add(wingSizeOne);
         GENOTYPES.add(wingSizeTwo);
         GENOTYPES.add(featherWings);
         GENOTYPES.add(insectWings);
         GENOTYPES.add(faerieWings);
+        GENOTYPES.add(legs);
+        GENOTYPES.add(spikeArms);
+        GENOTYPES.add(clawsLength);
+        GENOTYPES.add(serratedClaw);
         GENOTYPES.add(ramHorns);
         GENOTYPES.add(spikeHorns);
-        GENOTYPES.add(cudgelTail);
-        GENOTYPES.add(clawsLength);
-        GENOTYPES.add(legs);
-        GENOTYPES.add(sex);
         GENOTYPES.add(crownHorns);
-        GENOTYPES.add(buildOne);
-        GENOTYPES.add(buildTwo);
-        GENOTYPES.add(sizeOne);
-        GENOTYPES.add(sizeTwo);
-        GENOTYPES.add(venom);
-        GENOTYPES.add(serratedClaw);
+        GENOTYPES.add(nose);
+        GENOTYPES.add(monsterScent);
+        GENOTYPES.add(itemScent);
         GENOTYPES.add(nocturnalEyes);
         GENOTYPES.add(infraredEyes);
         GENOTYPES.add(xrayEyes);
         GENOTYPES.add(tongue);
-        GENOTYPES.add(nose);
-        GENOTYPES.add(monsterScent);
-        GENOTYPES.add(itemScent);
+        GENOTYPES.add(venom);
         GENOTYPES.add(breathShapeOne);
         GENOTYPES.add(breathShapeTwo);
+        GENOTYPES.add(sex);
+        GENOTYPES.add(buildOne);
+        GENOTYPES.add(buildTwo);
+        GENOTYPES.add(sizeOne);
+        GENOTYPES.add(sizeTwo);
         GENOTYPES.add(magicOne);
         GENOTYPES.add(magicTwo);
         GENOTYPES.add(magicThree);
-        GENOTYPES.add(bellyPlating);
         GENOTYPES.add(scales);
+        GENOTYPES.add(bellyPlating);
         GENOTYPES.add(plateScales);
         GENOTYPES.add(featherScales);
         GENOTYPES.add(spikeLength);
         GENOTYPES.add(spikeLocation);
-        GENOTYPES.add(spikeArms);
+        GENOTYPES.add(bodyLengthOne);
+        GENOTYPES.add(bodyLengthTwo);
 
         //Phenotypes
         String[] longTailOne = {"LL"};
@@ -154,24 +151,85 @@ public class Database {
         String[] male = {"XY"};
         String[] female = {"XX"};
 
-        Map tailLong = new HashMap();
-        tailLong.put("tailLength", 5);
+        Map<String, Integer>tailLong = new HashMap<>();
+        tailLong.put("tailLength", 10);
         PHENOTYPES.add(new Phenotype("Long Tail One", longTailOne, tailLong));
         PHENOTYPES.add(new Phenotype("Long Tail Two", longTailTwo, tailLong));
 
-        Map tailMed = new HashMap();
-        tailMed.put("tailLength", 2.5);
+        Map<String, Integer>tailMed = new HashMap<>();
+        tailMed.put("tailLength", 5);
         PHENOTYPES.add(new Phenotype("Medium Tail One", mediumTailOne, tailMed));
         PHENOTYPES.add(new Phenotype("Medium Tail Two", mediumTailTwo, tailMed));
 
-        Map tailShort = new HashMap();
+        Map<String, Integer>tailShort = new HashMap<>();
         tailShort.put("tailLength", 0);
         PHENOTYPES.add(new Phenotype("Short Tail One", shortTailOne, tailShort));
         PHENOTYPES.add(new Phenotype("Short Tail Two", shortTailTwo, tailShort));
 
-        PHENOTYPES.add(new Phenotype("Male",male));
-        PHENOTYPES.add(new Phenotype("Female",female));
+        Map<String, Integer>spikeTailM = new HashMap<>();
+        spikeTailM.put("spikeTail", 1);
+        PHENOTYPES.add(new Phenotype("Spike Tail", spikedTail, spikeTailM));
 
+        Map<String, Integer>cudgelTailM = new HashMap<>();
+        cudgelTailM.put("cudgelTail", 1);
+        PHENOTYPES.add(new Phenotype("Cudgel Tail", cudgeledTail, cudgelTailM));
+
+        Map<String, Integer>bladeTailM = new HashMap<>();
+        bladeTailM.put("bladeTail", 1);
+        PHENOTYPES.add(new Phenotype("Blade Tail", bladedTail, bladeTailM));
+
+        Map<String, Integer>wingLong = new HashMap<>();
+        wingLong.put("wingLength", 10);
+        PHENOTYPES.add(new Phenotype("Long Wing One", bigWingOne, wingLong));
+        PHENOTYPES.add(new Phenotype("Long Wing Two", bigWingTwo, wingLong));
+
+        Map<String, Integer>wingMed = new HashMap<>();
+        wingMed.put("wingLength", 5);
+        PHENOTYPES.add(new Phenotype("Medium Wing One", mediumWingOne, wingMed));
+        PHENOTYPES.add(new Phenotype("Medium Wing Two", mediumWingTwo, wingMed));
+
+        Map<String, Integer>wingShort = new HashMap<>();
+        wingShort.put("wingLength", 0);
+        PHENOTYPES.add(new Phenotype("Short Wing One", smallWingOne, wingShort));
+        PHENOTYPES.add(new Phenotype("Short Wing Two", smallWingTwo, wingShort));
+
+        Map<String, Integer>featheredWingsM = new HashMap<>();
+        featheredWingsM.put("featheredWings", 1);
+        PHENOTYPES.add(new Phenotype("Feathered Wings", featheredWings, featheredWingsM));
+
+        Map<String, Integer>insectoidWingsM = new HashMap<>();
+        insectoidWingsM.put("insectoidWings", 1);
+        PHENOTYPES.add(new Phenotype("Insect Wings", insectoidWings, insectoidWingsM));
+
+        Map<String, Integer>fairyWingsM = new HashMap<>();
+        fairyWingsM.put("fairyWings", 1);
+        PHENOTYPES.add(new Phenotype("Fairy Wings", fairyWings, fairyWingsM));
+
+        Map<String, Integer>spikedHornsM = new HashMap<>();
+        spikedHornsM.put("spikedHorns", 1);
+        PHENOTYPES.add(new Phenotype("Spiked Horns", spikedHorns, spikedHornsM));
+
+        Map<String, Integer>ramHornsM = new HashMap<>();
+        ramHornsM.put("ramHorns", 1);
+        PHENOTYPES.add(new Phenotype("Ram Horns", ramHorn, ramHornsM));
+
+        Map<String, Integer>crownHornsM = new HashMap<>();
+        crownHornsM.put("crownHorns", 1);
+        PHENOTYPES.add(new Phenotype("Crown Horns", crownHorn, crownHornsM));
+
+
+
+
+
+
+
+        Map<String, Integer>maleSex = new HashMap<>();
+        maleSex.put("sex", 0);
+        PHENOTYPES.add(new Phenotype("Male", male, maleSex));
+
+        Map<String, Integer>femaleSex = new HashMap<>();
+        femaleSex.put("sex", 1);
+        PHENOTYPES.add(new Phenotype("Female", female, femaleSex));
     }
 
 

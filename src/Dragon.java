@@ -6,9 +6,12 @@ public class Dragon {
     private int health;
     private int magic;
     private int size;
+    private int tailLength;
     private Double damage;
     private Double speed;
+
     private ArrayList<String> genes;
+
     private Random rand = new Random();
     private boolean hasSpikedTail = false;
 
@@ -18,7 +21,10 @@ public class Dragon {
         this.size = 1;
         this.damage = 10.0;
         this.speed = 5.0;
+
+        this.tailLength = 0;
         this.genes = genes;
+
     }
 
     public ArrayList<String> getGenes() { return this.genes; }
@@ -40,5 +46,18 @@ public class Dragon {
             newDragonGenes.add(Character.toString(firstGene) + Character.toString(secondGene));
         }
         return new Dragon(newDragonGenes);
+    }
+
+    private void Build () {
+        for(int i = 0; i < this.genes.size(); i++) {
+            switch(i) {
+                case 0: //Tail Lengths
+                    if(this.genes.get(0).equals("LL")) {
+                        this.tailLength += 5;
+
+                    }
+
+            }
+        }
     }
 }
