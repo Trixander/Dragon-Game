@@ -4,34 +4,25 @@ import java.util.concurrent.ConcurrentMap;
 public class Phenotype {
     String name;
     String[] genotypes;
-    Map map;
+    Map<String, Integer> map;
 
-    public Phenotype(String name, String[] genotype, Map map) {
+    public Phenotype(String name, String[] genotypes, Map<String, Integer> map) {
         this.name = name;
         this.genotypes = genotypes;
         this.map = map;
     }
 
-
-     /*for(int i = 0; i < genes.size(); i++){
-        String genotype = genes.get(0);
-        boolean found = false;
-        int count = 0;
-        while(!found){
-            if(database.PHENOTYPES.get(count).getGenotype().equals(genotype)){
-                found = true;
-                dragonPhenotypes.add(database.PHENOTYPES.get(count));
-            }
-            count++;
-        }
+    public String getName() {
+        return this.name;
     }
 
-    for(int i = 0; i < dragonPhenotypes; i++){
-        this.health += dragonPhenotypes.get(i).getHealth();
-        this.magic += ;lkajdf;lkajs;fd;
+    public String[] getGenotypes(){
+        return this.genotypes;
+    }
 
-    }*/
-
+    public Map<String, Integer> getMap() {
+        return this.map;
+    }
 }
 
 

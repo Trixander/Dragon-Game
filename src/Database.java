@@ -101,8 +101,8 @@ public class Database {
         String[] longTailTwo = {"MM"};
         String[] mediumTailOne = {"Ll"};
         String[] mediumTailTwo = {"Mm"};
-        String[] shortTailOne = {"mm"};
-        String[] shortTailTwo = {"ll"};
+        String[] shortTailTwo = {"mm"};
+        String[] shortTailOne = {"ll"};
         String[] spikedTail = {"ee"};
         String[] cudgeledTail = {"cc"};
         String[] bladedTail = {"bb"};
