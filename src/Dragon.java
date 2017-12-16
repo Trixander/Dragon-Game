@@ -30,6 +30,7 @@ public class Dragon {
         stats.put("speed", 5);
         stats.put("tailLength", 0);
         stats.put("bladeTail", 0);
+        stats.put("wingLength", 0);
 
         /*this.health = 100;
         this.magic = 0;
