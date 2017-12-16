@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Database {
     //Genotypes
@@ -151,8 +153,22 @@ public class Database {
         String[] lineShape = {"bb"};
         String[] male = {"XY"};
         String[] female = {"XX"};
-        PHENOTYPES.add(new Phenotype("Long Tail One",longTailOne));
-        PHENOTYPES.add(new Phenotype("Long Tail Two",longTailTwo));
+
+        Map tailLong = new HashMap();
+        tailLong.put("tailLength", 5);
+        PHENOTYPES.add(new Phenotype("Long Tail One", longTailOne, tailLong));
+        PHENOTYPES.add(new Phenotype("Long Tail Two", longTailTwo, tailLong));
+
+        Map tailMed = new HashMap();
+        tailMed.put("tailLength", 2.5);
+        PHENOTYPES.add(new Phenotype("Medium Tail One", mediumTailOne, tailMed));
+        PHENOTYPES.add(new Phenotype("Medium Tail Two", mediumTailTwo, tailMed));
+
+        Map tailShort = new HashMap();
+        tailShort.put("tailLength", 0);
+        PHENOTYPES.add(new Phenotype("Short Tail One", shortTailOne, tailShort));
+        PHENOTYPES.add(new Phenotype("Short Tail Two", shortTailTwo, tailShort));
+
         PHENOTYPES.add(new Phenotype("Male",male));
         PHENOTYPES.add(new Phenotype("Female",female));
 

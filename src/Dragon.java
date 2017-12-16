@@ -10,6 +10,7 @@ public class Dragon {
     private Double speed;
     private ArrayList<String> genes;
     private Random rand = new Random();
+    private boolean hasSpikedTail = false;
 
     public Dragon(ArrayList<String> genes) {
         this.health = 100;
